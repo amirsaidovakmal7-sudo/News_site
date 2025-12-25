@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Старница с категориями</title>
+</head>
+<body>
+<h1>Новости по категориям: {{category}}</h1>
+{%for n in new%}
+<a href="/new/{{n.id}}">{{n}}</a>
+{%endfor%}
+</body>
+</html>

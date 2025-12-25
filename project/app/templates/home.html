@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+<h1>Категории</h1>
+{%for c in categories%}
+<a href="/category/{{c.id}}">{{c}}</a>
+{%endfor%}
+<hr>
+<h1>Новости</h1>
+{%for n in news%}
+<a href="/new/{{n.id}}">{{n}}</a>
+{%endfor%}
+</body>
+</html>
