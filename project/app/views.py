@@ -23,9 +23,9 @@ def category_page(request, pk):
 
 
 def news_page(request, pk):
-    new = News.objects.get(id=pk)
+    news = News.objects.get(id=pk)
     context = {
-        'new': new
+        'new': news
     }
     return render(request, 'news.html', context)
 
