@@ -5,5 +5,9 @@ urlpatterns = [
     path('', views.home_page),
     path('category/<int:pk>', views.category_page),
     path('new/<int:pk>', views.news_page),
+    path('search', views.search),
+    path('register', views.Registration.as_view()),
+    path('logout', views.logout_page),
+
 
 ]
