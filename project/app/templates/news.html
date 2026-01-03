@@ -39,7 +39,7 @@
                        placeholder="Поиск..."
                        aria-label="Search">
             </form>
-            {% if user.is_authendicated %}
+            {% if user.is_authenticated %}
             <div class="text-end">
                 <a href="/logout" class="btn btn-warning">  Выйти </a>
             </div>
@@ -58,6 +58,12 @@
             <span class="fs-2 text-body-light">{{ new.title_name }}</span>
             <p>{{ new.news_text }}</p>
     <p class="lead">Категория: <a href="/category/{{ new.news_category.id }}">{{ new.news_category }}</a></p>
+    <p> Видео:</p>
+    <video width="400" height="200" controls>
+        <source src="{{ new.news_video.url }}">
+    </video>
+
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
