@@ -19,7 +19,7 @@ class News(models.Model):
     title_name = models.CharField(max_length=100, verbose_name='Заголовок')
     news_text = models.TextField('Опишите новость')
     news_category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    news_video = models.FileField(upload_to='media', verbose_name='Видео', default='')
+    news_video = models.FileField(upload_to='', verbose_name='Видео', default='')
     add_data = models.DateTimeField(auto_now_add=True)
 
     class Meta:
